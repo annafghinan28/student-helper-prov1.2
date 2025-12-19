@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # -*- mode: python ; coding: utf-8 -*-
 
 
@@ -37,3 +38,44 @@ exe = EXE(
     entitlements_file=None,
     icon=['StudentHelperIconV1.2.ico'],
 )
+=======
+# -*- mode: python ; coding: utf-8 -*-
+
+
+a = Analysis(
+    ['main.py'],
+    pathex=[],
+    binaries=[],
+    datas=[('style.qss', '.'), ('home_chart.py', '.')],
+    hiddenimports=[],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[],
+    noarchive=False,
+    optimize=0,
+)
+pyz = PYZ(a.pure)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.datas,
+    [],
+    name='Student Helper Pro',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    runtime_tmpdir=None,
+    console=False,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+    icon=['StudentHelperIconV1.2.ico'],
+)
+>>>>>>> 6f8c74b61db7b91443edac1be989deeb72a66dd3
